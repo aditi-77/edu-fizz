@@ -22,7 +22,7 @@ fetch('colleges.json')
             <div class="card-body">
               <h5 class="card-title">${college.name}</h5>
               <p class="card-text">${college.location}</p>
-              <a href="${college.website}" class="card-link" target="_blank">Visit Website</a>
+              <a href="college.html" class="card-link" target="_blank">Visit Website</a>
               <div class="d-flex justify-content-between">
                 <!-- Apply Button (Bottom-Left) -->
                 <button class="btn btn-outline-primary position-absolute bottom-0 start-0 m-3" data-bs-toggle="modal" data-bs-target="#applyModal" onclick="passName('${college.name}')">Apply</button>

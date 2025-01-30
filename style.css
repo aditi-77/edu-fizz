@@ -1,0 +1,233 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0px;
+  font-family: 'Poppins', sans-serif !important;
+  background-color: white;
+  color: #333;
+  overflow-x: hidden;
+  width: 100%;
+
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* Header */
+.navbar {
+  background-image: linear-gradient(to top right, #2f94ff, #65aeff);
+  color: #ffffff !important;
+}
+
+.navbar-nav {
+  margin-right: 150px;
+}
+
+.offcanvas {
+  background-color: #56a7ff;
+  width: 250px !important;
+}
+
+.hero {
+  background: linear-gradient(135deg, #0073e6, #5ab0e6);
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-content {
+  position: relative;
+  max-width: 700px;
+}
+
+/* Explore Section */
+.explore-section {
+  padding: 80px 0;
+  background-color: #f8f9fa;
+}
+
+.explore-section {
+  padding: 60px 0;
+  background: #f8f9fa;
+  text-align: center;
+}
+
+.explore-section h2 {
+  font-size: 2.0rem;
+}
+
+.explore-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.explore-card img {
+  width: 100%;
+  transition: transform 0.4s ease;
+}
+
+.explore-card:hover img {
+  transform: scale(1.1);
+}
+
+.explore-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.explore-card:hover .explore-overlay {
+  opacity: 1;
+}
+
+.explore-overlay h3 {
+  font-weight: bold;
+}
+
+.about-significance-section {
+  padding: 60px 0;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+
+}
+
+.about-significance-section h2 {
+  font-size: 2.0rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #0073e6;
+  /* Eye-catching color */
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.about-significance-section p {
+  font-size: 1.3rem;
+  color: #555;
+}
+
+#colleges {
+  padding: 70px 70px;
+  background-image: url("images/cap-throw.jpg");
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.card {
+  padding: 10px;
+  width: 350px;
+  height: 400px;
+}
+
+.card-link {
+  text-decoration: none;
+}
+
+.college-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.college-card:hover {
+  transform: translateY(-10px);
+  /* Lift the card slightly */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  /* Add a deeper shadow */
+}
+
+@media (max-width:768px) {
+  #colleges {
+    padding: 70px 30px;
+  }
+}
+
+.testimonial-section{
+  background-color: white;
+  justify-content: center;
+  padding: 70px 0px;
+}
+
+.testimonial-card {
+  background-color: #f9f9f9;
+  padding: 30px;
+  margin: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  text-align: center;
+  width: 300px;
+  transition: transform 0.3s ease;
+  border-width: 0px;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-10px);
+}
+
+.testimonial-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.footer {
+  background-image: linear-gradient(to top right, #2f94ff, #65aeff);  color: #ffffff;
+  padding: 50px 0;
+}
+.footer a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.footer a:hover {
+  text-decoration: underline;
+}
+.newsletter-input {
+  border-radius: 25px;
+  padding: 10px 20px;
+  border: none;
+  width: 100%;
+}
+.subscribe-btn {
+  border-radius: 25px;
+  padding: 10px 20px;
+}
+.social-icons a {
+  margin: 0 10px;
+  font-size: 24px;
+}

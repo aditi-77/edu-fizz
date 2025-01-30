@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduFizz</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <!-- Navbar -->
+        <nav class="navbar fixed-top  navbar-expand-lg">
+            <div class="container-fluid">
+                <!-- Logo -->
+                <a class="navbar-brand" href="#">
+                    <img src="images/Edufizz logo.png" alt="Logo" class="img-fluid" style="max-width: 130px;">
+                </a>
+
+                <!-- Offcanvas Toggle Button (Visible only on small screens) -->
+                <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Navbar items (Centered on larger screens) -->
+                <div class="collapse navbar-collapse justify-content-center d-none d-lg-flex">
+                    <ul class="navbar-nav fs-5">
+                        <li class="nav-item">
+                            <a class="nav-link active text-white" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">Colleges</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Off-Canvas Sidebar (Small Screens) -->
+        <div class="offcanvas offcanvas-end text-white" tabindex="-1" id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Colleges</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content text-center">
+            <h1 class="display-4 fw-bold">Find Your Dream College</h1>
+            <p class="lead">Explore and compare top colleges across the country</p>
+    </section>
+
+    <section class="explore-section">
+        <h2 class="mb-4 fw-bold">Explore More</h2>
+        <div class="container-fluid">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="explore-card">
+                        <img src="images/img 1.jpg" alt="University">
+                        <div class="explore-overlay">
+                            <h3>Find Your Dream College</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="explore-card">
+                        <img src="images/img 2.jpg" alt="Campus">
+                        <div class="explore-overlay">
+                            <h3>Personalized Counseling</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="explore-card">
+                        <img src="images/img 3.jpg" alt="Students">
+                        <div class="explore-overlay">
+                            <h3>Compare Courses</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About & Significance Section -->
+    <section class="about-significance-section">
+        <div class="container text-center">
+            <div class="d-flex flex-column justify-content-center align-items-center">
+                <!-- About Us -->
+                <div class="col-md-6 mb-4">
+                    <h2>About Us</h2>
+                    <p>
+                        At <strong>EduFizz</strong>, we help students find the best colleges that match their
+                        aspirations.
+                        Our platform simplifies the college search process with curated data and easy-to-use tools.
+                    </p>
+                </div>
+
+                <!-- Significance -->
+                <div class="col-md-6">
+                    <h2>Why Choose EduFizz?</h2>
+                    <p>
+                        EduFizz offers a one-stop solution to explore top colleges, compare courses, and make informed
+                        academic decisions with transparent and accurate data.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="colleges" class="container-fluid ">
+        <h2 class="text-center mb-4 fw-bold">Top Colleges</h2>
+        <div class="row" id="college-cards">
+            <!-- College Cards will be injected here dynamically -->
+        </div>
+    </section>
+
+    <!-- Apply Modal (for all colleges) -->
+    <div class="modal fade" id="applyModal" tabindex="-1" aria-labelledby="applyModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="applyModalLabel">Apply to <span id="applyCollegeName"></span></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="applyForm">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input type="phone" class="form-control" id="phone" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="course" class="form-label">What is your preferred course/stream?</label>
+                            <input type="text" class="form-control" id="course" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit Application</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Counselor Modal (for all colleges) -->
+    <div class="modal fade" id="counselorModal" tabindex="-1" aria-labelledby="counselorModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="counselorModalLabel">Get Counseling for <span
+                            id="counselCollegeName"></span></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="counselorForm">
+                        <div class="mb-3">
+                            <label for="nameCounselor" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="nameCounselor" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input type="phone" class="form-control" id="phone" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="course" class="form-label">What is your preferred course/stream?</label>
+                            <input type="text" class="form-control" id="course" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Request Counseling</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+  <section class="testimonial-section text-center">
+    <div class="container-fluid">
+      <h2 class="mb-4 fw-bold">What Our Students Say</h2>
+      <div class="row justify-content-center">
+        <!-- Testimonial Card 1 -->
+        <div class="col-md-4 d-flex justify-content-center">
+          <div class="card testimonial-card p-4">
+            <img src="images/student -img.webp" alt="Student 1" class="testimonial-image mx-auto">
+            <p class="lead">"This course has been a game-changer for my academic journey. The content is well-organized and easy to follow!"</p>
+            <h5 class="font-weight-bold fw-bold">John Doe</h5>
+            <p class="text-muted">Computer Science,MIT</p>
+          </div>
+        </div>
+
+        <!-- Testimonial Card 2 -->
+        <div class="col-md-4 d-flex justify-content-center">
+          <div class="card testimonial-card p-4">
+            <img src="images/student -img.webp" alt="Student 2" class="testimonial-image mx-auto">
+            <p class="lead">"Incredible learning experience! The interactive lessons helped me grasp complex topics easily."</p>
+            <h5 class="font-weight-bold fw-bold">Jane Smith</h5>
+            <p class="text-muted">Arts,Harvard</p>
+          </div>
+        </div>
+
+        <!-- Testimonial Card 3 -->
+        <div class="col-md-4 d-flex justify-content-center">
+          <div class="card testimonial-card p-4">
+            <img src="images/student -img.webp" alt="Student 3" class="testimonial-image mx-auto">
+            <p class="lead">"Great instructors and a fantastic learning environment! I feel much more confident in my skills."</p>
+            <h5 class="font-weight-bold fw-bold">Michael Lee</h5>
+            <p class="text-muted">Business,Stanford</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="footer text-center text-lg-start">
+    <div class="container">
+      <!-- Newsletter Section -->
+      <div class="row justify-content-center mb-4">
+        <div class="col-md-6 text-center">
+          <h2 class="fw-bold">Subscribe to Our Newsletter</h2>
+          <p>Stay updated with the latest college news and insights.</p>
+          <form class="d-flex">
+            <input type="email" class="form-control newsletter-input me-2" placeholder="Enter your email">
+            <button type="submit" class="btn btn-primary subscribe-btn">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <hr class="bg-light">
+
+      <!-- Contact Details Section -->
+      <div class="row text-center justify-content-center">
+        <!-- Address -->
+        <div class="col-md-4 mb-3 ">
+          <h2 class="fw-bold">Contact Us</h2>
+          <p>123 Street, City, Country</p>
+          <p>Email: contact@example.com</p>
+          <p>Phone: +123 456 7890</p>
+        </div>
+
+        <!-- Quick Links
+        <div class="col-md-4 mb-3">
+          <h5>Quick Links</h5>
+          <p><a href="#">About Us</a></p>
+          <p><a href="#">Services</a></p>
+          <p><a href="#">Privacy Policy</a></p>
+        </div>
+
+        
+        <div class="col-md-4 mb-3">
+          <h5>Follow Us</h5>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div> -->
+
+      <hr class="bg-light">
+
+      <!-- Copyright Section -->
+      <div class="text-center py-3">
+        <p class="mb-0">© 2025 EduFizz. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

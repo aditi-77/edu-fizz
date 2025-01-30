@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "name": "Harvard University",
+    "location": "Cambridge, MA, USA",
+    "courses": ["Computer Science", "Business Administration", "Law", "Medicine"],
+    "website": "https://www.harvard.edu",
+    "image": "images/MIT.png"
+  },
+  {
+    "id": 2,
+    "name": "Stanford University",
+    "location": "Stanford, CA, USA",
+    "courses": ["Engineering", "Biology", "Business", "Law"],
+    "website": "https://www.stanford.edu",
+    "image": "images/MIT.png"
+  },
+  {
+    "id": 3,
+    "name": "Massachusetts Institute of Technology (MIT)",
+    "location": "Cambridge, MA, USA",
+    "courses": ["Physics", "Computer Science", "Electrical Engineering", "Aerospace Engineering"],
+    "website": "https://www.mit.edu",
+    "image": "images/MIT.png"
+  },
+  {
+    "id": 4,
+    "name": "University of Oxford",
+    "location": "Oxford, UK",
+    "courses": ["Philosophy", "Physics", "Mathematics", "Law"],
+    "website": "https://www.ox.ac.uk",
+    "image": "images/MIT.png"
+  },
+  {
+    "id": 5,
+    "name": "California Institute of Technology (Caltech)",
+    "location": "Pasadena, CA, USA",
+    "courses": ["Physics", "Engineering", "Astronomy", "Mathematics"],
+    "website": "https://www.caltech.edu",
+    "image": "images/MIT.png"
+  },
+  {
+    "id": 6,
+    "name": "University of Cambridge",
+    "location": "Cambridge, UK",
+    "courses": ["Economics", "Mathematics", "Engineering", "History"],
+    "website": "https://www.cam.ac.uk",
+    "image": "images/MIT.png"
+  },
+  {
+    "id": 7,
+    "name": "Princeton University",
+    "location": "Princeton, NJ, USA",
+    "courses": ["Mathematics", "Physics", "Engineering", "Humanities"],
+    "website": "https://www.princeton.edu",
+    "image": "images/MIT.png"
+  },
+  {
+    "id": 8,
+    "name": "University of Chicago",
+    "location": "Chicago, IL, USA",
+    "courses": ["Economics", "Law", "Business", "Physics"],
+    "website": "https://www.uchicago.edu",
+    "image": "images/MIT.png"
+  },
+  {
+    "id": 9,
+    "name": "Columbia University",
+    "location": "New York City, NY, USA",
+    "courses": ["Business", "Law", "Arts", "Philosophy"],
+    "website": "https://www.columbia.edu",
+    "image": "images/MIT.png"
+  },
+  {
+    "id": 10,
+    "name": "Yale University",
+    "location": "New Haven, CT, USA",
+    "courses": ["Law", "Business", "History", "Medical Sciences"],
+    "website": "https://www.yale.edu",
+    "image": "images/MIT.png"
+  },
+  {
+    "id": 11,
+    "name": "University of California, Berkeley",
+    "location": "Berkeley, CA, USA",
+    "courses": ["Environmental Science", "Engineering", "Business", "Physics"],
+    "website": "https://www.berkeley.edu",
+    "image": "images/MIT.png"
+  },
+  {
+    "id": 12,
+    "name": "University of California, Los Angeles (UCLA)",
+    "location": "Los Angeles, CA, USA",
+    "courses": ["Arts", "Engineering", "Mathematics", "Business"],
+    "website": "https://www.ucla.edu",
+    "image": "images/MIT.png"
+  }
+]

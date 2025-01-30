@@ -43,6 +43,7 @@ body {
 }
 
 .hero {
+  margin-top: 100px;
   background: linear-gradient(135deg, #0073e6, #5ab0e6);
   min-height: 50vh;
   display: flex;
